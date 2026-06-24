@@ -1,0 +1,33 @@
+
+<!-- DAY WISE LOGIN REPORT -->
+<div class="date-block" *ngFor="let day of loginHistory">
+
+  <!-- SUMMARY ROW -->
+  <div class="date-header" (click)="day.expanded = !day.expanded">
+    <span>📅 {{ day.date }}</span>
+    <span>🔁 Logins: {{ day.loginCount }}</span>
+    <span>⏱️ {{ day.totalDuration }}</span>
+
+    <span class="status" [class.active]="day.isActive">
+      {{ day.isActive ? '🟢 Active' : 'Logged Out' }}
+    </span>
+  </div>
+
+  <!-- SESSION DETAILS -->
+  <div class="sessions" *ngIf="day.expanded">
+    <div
+      class="session-row"
+      *ngFor="let s of day.sessions"
+      [class.active]="s.isActive"
+    >
+      <span>{{ s.login }}</span>
+      <span>→</span>
+      <span>{{ s.logout || 'Active' }}</span>
+      <span>{{ s.duration }}</span>
+      <span>
+        {{ s.isActive ? '🟢 Active' : 'Logged Out' }}
+      </span>
+    </div>
+  </div>
+
+</div>
