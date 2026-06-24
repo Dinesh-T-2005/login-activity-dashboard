@@ -183,15 +183,15 @@ Provides a complete activity screen for session monitoring and daily tracking.
 
 ### Activity Summary Dashboard
 
-![Activity Summary Dashboard](./screenshots/activity-summary-dashboard.png)
+![Activity Summary Dashboard](./userlogin/pic1.png)
 
 ### Session Timeline
 
-![Session Timeline](./screenshots/session-timeline.png)
+![Session Timeline](./userlogin/pic1.png)
 
 ### Login Activity View
 
-![Login Activity View](./screenshots/login-activity-view.png)
+![Login Activity View](./userlogin/pic2.png)
 
 > Create a folder named **`screenshots`** in the repo root and add your screenshots using these names:
 
